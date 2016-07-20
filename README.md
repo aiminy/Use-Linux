@@ -9,4 +9,4 @@
 
  * find empty directory
 
-find /media/H_driver/PJ/Results -depth -type d -empty
+ find /media/H_driver/PJ/Results -depth -type d -empty
