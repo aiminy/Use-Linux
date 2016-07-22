@@ -10,3 +10,11 @@
  * find empty directory
 
  find /media/H_driver/PJ/Results -depth -type d -empty
+
+*Setup for R on Path
+
+export PATH=$HOME/packages/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/packages/lib:$LD_LIBRARY_PATH 
+export CFLAGS="-I$HOME/packages/include" 
+export LDFLAGS="-L$HOME/packages/lib"
+export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:$HOME/packages/include"
