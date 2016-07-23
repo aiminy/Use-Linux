@@ -1,5 +1,9 @@
 # Use-Linux
+ * Find Select_DE_gene_basd_on_Feature in R code
+ 
  ack-grep Select_DE_gene_basd_on_Feature ~/GOSJ/R/*.R
+ 
+ * Find the file with .tiff extension
  
  find /media/H_driver/ -name  "*.tiff" 2>/dev/null
  
