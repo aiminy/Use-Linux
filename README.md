@@ -11,9 +11,7 @@
 
  find /media/H_driver/PJ/Results -depth -type d -empty
 
- * Setup path for R installation
- 
- add the following settings to $HOME/.bashrc, then source $HOME/.bashrc 
+ * Setup path for R installation(add the following settings to $HOME/.bashrc, then source $HOME/.bashrc) 
 
  export PATH=$HOME/packages/bin:$PATH
 
