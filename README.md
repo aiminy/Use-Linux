@@ -1,8 +1,8 @@
 # Use-Linux
 
- *Kill all background jobs 
+ * Kill all background jobs 
 
- kill -9 $(jobs -p)
+  kill -9 $(jobs -p)
 
  * Find Select_DE_gene_basd_on_Feature in R code
  
