@@ -4,6 +4,10 @@
 
   kill -9 $(jobs -p)
 
+*Run job interactively on pegasus
+
+  bsub -P bbc -Is -q interactive bash
+  
  * Find Select_DE_gene_basd_on_Feature in R code
  
  ack-grep Select_DE_gene_basd_on_Feature ~/GOSJ/R/*.R
