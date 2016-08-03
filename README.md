@@ -4,7 +4,7 @@
 
   kill -9 $(jobs -p)
 
-*Run job interactively on pegasus
+ * Run job interactively on pegasus
 
   bsub -P bbc -Is -q interactive bash
   
