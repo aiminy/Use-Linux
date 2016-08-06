@@ -1,5 +1,9 @@
 # Use-Linux
 
+ * list UUID
+
+ ls -l /dev/disk/by-uuid/
+
  * Kill all background jobs 
 
   kill -9 $(jobs -p)
