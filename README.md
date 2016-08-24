@@ -1,5 +1,13 @@
 # Use-Linux
 
+ * search file with pattern
+
+ grep -r pattern /path 2> /dev/null
+
+ ack-grep pattern /path 2> /dev/null
+ 
+ Example: ack-grep "bcl2fastq*" ~/ 2>/dev/null
+ 
  * list UUID
 
  ls -l /dev/disk/by-uuid/
