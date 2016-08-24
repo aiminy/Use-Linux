@@ -1,6 +1,6 @@
 # Use-Linux
 
- * search file with pattern
+ * search files with pattern
 
  grep -r pattern /path 2> /dev/null
 
