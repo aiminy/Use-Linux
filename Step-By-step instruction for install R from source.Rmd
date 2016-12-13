@@ -105,3 +105,13 @@ cd R-devel
 make
 make install
 ```
+
+
+# When You need install new package, you need specify the library:
+
+```{r}
+.libPaths()
+
+# select path
+install.packages("parallel",lib=.libPaths()[2])
+```
