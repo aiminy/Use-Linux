@@ -115,3 +115,15 @@ make install
 # select path
 install.packages("parallel",lib=.libPaths()[2])
 ```
+## or
+```{bash}
+emacs .Renviron
+```
+##add
+```{bash}
+R_LIBS_USER="/nethome/axy148/R/lib64/R/library" to .Renviron
+```
+
+
+
+
