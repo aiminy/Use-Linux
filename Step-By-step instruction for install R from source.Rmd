@@ -15,6 +15,10 @@ export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:$HOME/packages/include"
 # Install zlib
 
 ```{bash}
+
+mkdir $HOME/src
+mkdir $HOME/packages
+
 cd ~/src
 wget http://www.zlib.net/zlib-1.2.8.tar.gz
 tar -xvzf zlib-1.2.8.tar.gz
@@ -24,8 +28,8 @@ cd zlib-1.2.8
 
 vi Makefile:
   CC= gcc  -fPIC
-original：CFLAGS=-I/nethome/xxs522/packages/include 
-revised：CFLAGS=-I/nethome/xxs522/packages/include  -fPIC
+original：CFLAGS=-I$HOME/packages/include 
+revised：CFLAGS=-I$HOME/packages/include -fPIC
 
 make
 make install
@@ -45,7 +49,7 @@ AR=ar
 RANLIB=ranlib
 LDFLAGS=
   
-  BIGFILES=-D_FILE_OFFSET_BITS=64
+BIGFILES=-D_FILE_OFFSET_BITS=64
 CFLAGS=-fPIC -Wall -Winline -O2 -g $(BIGFILES)  
 
 make -f Makefile-libbz2_so
