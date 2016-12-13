@@ -1,0 +1,97 @@
+(1)load java and gcc
+module load java/1.8.0_60
+module load gcc/4.9.3
+
+(2) add the following settings to $HOME/.bashrc, then source $HOME/.bashrc
+export PATH=$HOME/packages/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/packages/lib:$LD_LIBRARY_PATH
+export CFLAGS="-I$HOME/packages/include"
+export LDFLAGS="-L$HOME/packages/lib"
+export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:$HOME/packages/include"
+
+(3) Install zlib
+cd ~/src
+wget http://www.zlib.net/zlib-1.2.8.tar.gz
+tar -xvzf zlib-1.2.8.tar.gz
+cd zlib-1.2.8
+
+./configure –prefix=$HOME/packages
+
+vi Makefile:
+  CC= gcc  -fPIC
+original：CFLAGS=-I/nethome/xxs522/packages/include 
+revised：CFLAGS=-I/nethome/xxs522/packages/include  -fPIC
+
+make
+make install
+
+(4) Install bzlib
+cd ~/src
+wget http://www.bzip.org/1.0.6/bzip2-1.0.6.tar.gz
+tar xzvf bzip2-1.0.6.tar.gz
+cd bzip2-1.0.6
+
+vi Makefile:
+  CC=gcc -fPIC  
+AR=ar
+RANLIB=ranlib
+LDFLAGS=
+  
+  BIGFILES=-D_FILE_OFFSET_BITS=64
+CFLAGS=-fPIC -Wall -Winline -O2 -g $(BIGFILES)  
+
+make -f Makefile-libbz2_so
+make clean
+make
+make -n install PREFIX=$HOME/packages
+
+(5) Install  liblzma
+cd ~/src
+wget http://tukaani.org/xz/xz-5.2.2.tar.gz
+tar xzvf xz-5.2.2.tar.gz
+cd xz-5.2.2
+./configure --prefix=$HOME/packages
+make -j3
+make install
+
+(6) Install pcre
+cd ~/src
+wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.38.tar.gz
+
+tar xzvf pcre-8.38.tar.gz
+cd pcre-8.38
+./configure --enable-utf8 --prefix=$HOME/packages (UTF-8 support  )
+make -j3
+make install
+
+(7) Install libcurl
+cd ~/src
+wget --no-check-certificate https://curl.haxx.se/download/curl-7.47.1.tar.gz
+tar xzvf curl-7.47.1.tar.gz
+cd curl-7.47.1
+./configure --prefix=$HOME/packages
+make -j3
+make install
+
+(8) install R-devel
+mkdir src
+cd src
+wget –no-check-certificate https://stat.ethz.ch/CRAN/src/base-prerelease/R-devel_2016-12-11_r71774.tar.gz
+
+tar xzvf R-devel_2016-12-11_r71774.tar.gz
+cd R-devel
+
+./configure --prefix=$HOME/src/R-devel/ --with-cairo  --with-jpeglib --with-readline --with-tcltk  --with-blas --enable-BLAS-shlib --with-lapack --enable-R-profiling '--enable-R-shlib' '--enable-memory-profiling'
+
+make
+make install
+
+@aiminy
+
+Attach files by dragging & dropping or
+
+.
+Styling with Markdown is supported
+
+Contact GitHub API Training Shop Blog About 
+
