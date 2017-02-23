@@ -136,4 +136,16 @@ cd R-3.3.1
  source ~/.bashrc
 ```
 
+# Some Problems for using gfortran
+```{bash}
+I had your same problem (in OS X Yosemite), and (unfortunately) painstakingly recreated your symlink "partial solution". Finally, I was able to solve the issue by forgetting about linking or aliasing and just downgrading to gfortran-4.8.
+
+I had installed the newer version with brew, so for me this entailed uninstalling
+
+brew uninstall gcc
+and then following the instructions here to install 4.8.2, i.e.
+
+curl -O http://r.research.att.com/libs/gfortran-4.8.2-darwin13.tar.bz2
+sudo tar fvxz gfortran-4.8.2-darwin13.tar.bz2 -C /
+```
 
