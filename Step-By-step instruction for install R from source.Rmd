@@ -138,14 +138,13 @@ cd R-3.3.1
 
 # Some Problems for using gfortran
 ```{bash}
-I had your same problem (in OS X Yosemite), and (unfortunately) painstakingly recreated your symlink "partial solution". Finally, I was able to solve the issue by forgetting about linking or aliasing and just downgrading to gfortran-4.8.
+ld: warning: directory not found for option '-L/usr/local/lib/gcc/x86_64-apple-darwin13.0.0/4.8.2'
 
-I had installed the newer version with brew, so for me this entailed uninstalling
+ld: library not found for -lquadmath I had your same problem (in OS X Yosemite), and (unfortunately) painstakingly recreated 
 
 brew uninstall gcc
-and then following the instructions here to install 4.8.2, i.e.
-
 curl -O http://r.research.att.com/libs/gfortran-4.8.2-darwin13.tar.bz2
 sudo tar fvxz gfortran-4.8.2-darwin13.tar.bz2 -C /
+
 ```
 
