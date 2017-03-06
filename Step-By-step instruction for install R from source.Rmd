@@ -136,6 +136,13 @@ cd R-3.3.1
  source ~/.bashrc
 ```
 
+# Install R development verwsion for windows
+```{bash}
+
+https://cran.r-project.org/bin/windows/base/rdevel.html
+
+```
+
 # Some Problems for using gfortran
 ```{bash}
 
