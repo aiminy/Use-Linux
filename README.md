@@ -64,3 +64,8 @@
  
  du -h | sort -rh | head
  
+ * Check size of all files
+ 
+ du -ha | sort -h
+ 
+ 
