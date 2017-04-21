@@ -60,7 +60,7 @@
  export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:$HOME/packages/include"
  
  
- # Check size of directory
+ * Check size of directory
  
  du -h | sort -rh | head
  
