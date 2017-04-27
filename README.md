@@ -67,5 +67,7 @@
  * Check size of all files
  
  du -ha | sort -h
- 
- 
+
+* pip install to certain directory
+
+ pip install --install-option="--prefix=$HOME/3UTR-Seq/inst/RSeQC" RSeQC
