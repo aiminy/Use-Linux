@@ -72,6 +72,7 @@
 
  pip install --install-option="--prefix=$HOME/3UTR-Seq/inst/RSeQC" RSeQC
  
- * update pysam module 
+ * update pysam module
+ 
  pip install --upgrade --user pysam
  
