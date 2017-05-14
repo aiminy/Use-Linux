@@ -71,3 +71,7 @@
 * pip install to certain directory
 
  pip install --install-option="--prefix=$HOME/3UTR-Seq/inst/RSeQC" RSeQC
+ 
+ * update pysam module 
+ pip install --upgrade --user pysam
+ 
