@@ -59,7 +59,10 @@
 
  export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:$HOME/packages/include"
  
+ * Check hard disk partitions and disk space on Linux
  
+ df -h | grep ^/dev
+
  * Check size of directory
  
  du -h | sort -rh | head
@@ -75,4 +78,3 @@
  * update pysam module
  
  pip install --upgrade --user pysam
- 
