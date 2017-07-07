@@ -131,13 +131,19 @@ cd R-3.3.1
 ./configure --prefix=$HOME/src/R-3.3.1/ --with-cairo  --with-jpeglib --with-readline --with-x --with-tcltk  --with-blas --enable-BLAS-shlib --with-lapack --enable-R-profiling '--enable-R-shlib' '--enable-memory-profiling' 
  make
  
- #make install
+ #to install R to $HOME, using the following command
+  make prefix=$HOME/R install
  
- make prefix=$HOME/R install
  
- which R
- emacs ~/.bashrc
+ #set path for R
+ emacs ~/.bashrc, 
+ add line:
+ export PATH=$HOME/R/bin/R:PATH
  source ~/.bashrc
+ 
+ #check where is R
+ which R
+ 
 ```
 
 # Install R development verwsion for windows
