@@ -1,7 +1,7 @@
 Step 1:-%%%%PuTTy login info%%%
-UID: sxm1600
-Host name: sxm1600@pegasus.ccs.miami.edu
-PASSWORD: t5rbhVhk
+UID: your_id
+Host name: yout_id@pegasus.ccs.miami.edu
+PASSWORD: your_pegasus_password
 
 
 Step 2:-%%%%File transfer by FTP (FileZilla)
@@ -11,8 +11,8 @@ host: pegasus.ccs.miami.edu
 Protocol: SFTP-SSH File Transfer protocol
 Port:  (blank)
 login type:Normal
-user: sxm1600
-password: t5rbhVhk
+user: your_id
+password: your_pegasus_password
 
 then connect
 remote site: "/nethome/sxm1600"
@@ -88,7 +88,7 @@ not use earlier
 ./configure --prefix=$HOME/Rsrc/R-3.4.1/ --with-cairo  --with-jpeglib --with-readline --with-x --with-tcltk  --with-blas --enable-BLAS-shlib --with-lapack --enable-R-profiling --without-recommended-packages '--enable-R-shlib' '--enable-memory-profiling'
 
 
- make prefix=$HOME/R install
+make prefix=$HOME/R install
 make prefix=$HOME/Rsrc install
 
 vi ~/.bashrc
@@ -99,11 +99,6 @@ export PATH=/nethome/sxm1600/Rsrc/bin:$HOME/packages/bin:$PATH
 
 [sxm1600@pegasus Rsrc]$ wget http://xmlsoft.org/sources/libxml2-2.7.8.tar.gz
 
-
-
-
 [sxm1600@pegasus ~]$ module unload python/2.7.3
 
 [sxm1600@pegasus ~]$ module load python/3.3.1
-
-
