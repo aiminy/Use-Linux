@@ -1,0 +1,109 @@
+Step 1:-%%%%PuTTy login info%%%
+UID: sxm1600
+Host name: sxm1600@pegasus.ccs.miami.edu
+PASSWORD: t5rbhVhk
+
+
+Step 2:-%%%%File transfer by FTP (FileZilla)
+Go to File-> Site Manager-> General
+
+host: pegasus.ccs.miami.edu
+Protocol: SFTP-SSH File Transfer protocol
+Port:  (blank)
+login type:Normal
+user: sxm1600
+password: t5rbhVhk
+
+then connect
+remote site: "/nethome/sxm1600"
+
+Step 3:- %%%%comment on cmd mode
+[sxm1600@pegasus ~]$ cd ..    ##go to the previous directory i.e., /nethome/
+[sxm1600@pegasus nethome]$ cd Rsrc ##go to next directory Rsrc i.e., /nethome/sxm1600/Rsrc
+
+Step 4:- %%%%%%%Go to interactive mode in R
+
+[sxm1600@pegasus Rsrc]$ pwd                     
+ans:        /nethome/sxm1600
+[sxm1600@pegasus Rsrc]$ R
+ans:    R version 3.4.1 
+
+[sxm1600@pegasus Rsrc]$ module avail R
+[sxm1600@pegasus python]$ module unload python/2.7.3
+[sxm1600@pegasus python]$ module load python/3.3.1
+[sxm1600@pegasus Rsrc]$ module unload R/3.1.2
+
+[sxm1600@pegasus Rsrc]$ module load R/3.4.1
+[sxm1600@pegasus Rsrc]$ bsub -Is -q interactive R
+or
+[sxm1600@pegasus Rsrc]$ R
+
+
+
+Step5:- %%%%%%%%new package installation in R
+%%src means Rsrc here
+
+>.libPaths()
+>.libPaths("/share/opt/R/3.3.1/lib64/R/library")#global
+>.libPaths(new="/nethome/sxm1600/R/x86_64-pc-linux-gnu-library")##local
+>.libPaths("/nethome/sxm1600/R/x86_64-pc-linux-gnu-library/3.3")##better local
+> install.packages("doParallel", repos="http://R-Forge.R-project.org")
+> install.packages("GeneSelector", repos="https://bioconductor.org/biocLite.R")
+> install.packages("GeneSelector", repos="https://bioconductor.org/biocLite.R", lib="/nethome/sxm1600/R/x86_64-pc-linux-gnu-library/3.3")
+> sessionInfo()
+
+## R version 3.0 or later
+>library(BiocInstaller)
+>biocValid()    
+
+
+%%%%%%         
+# add the following settings to $HOME/.bashrc, then source $HOME/.bashrc
+export PATH=$HOME/packages/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/packages/lib:$LD_LIBRARY_PATH
+export CFLAGS="-I$HOME/packages/include"
+export LDFLAGS="-L$HOME/packages/lib"
+export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:$HOME/packages/include"
+
+
+[sxm1600@pegasus Rsrc]$ wget http://zlib.net/fossils/zlib-1.2.8.tar.gz
+[sxm1600@pegasus zlib-1.2.8]$ ./configure --prefix=$HOME/packages
+[sxm1600@pegasus Rsrc]$ wget http://tukaani.org/xz/xz-5.2.2.tar.gz --no-check-certificate
+[sxm1600@pegasus xz-5.2.2]$ ./configure --prefix=$HOME/packages
+
+bzlib2
+[sxm1600@pegasus bzip2-1.0.6]$ make install PREFIX=$HOME/packages
+
+pcre
+
+[sxm1600@pegasus pcre-8.38]$ ./configure --enable-utf8 --prefix=$HOME/packages
+
+libcurl
+
+%%%%%%%%%%[sxm1600@pegasus R-3.4.1]$ ./configure --prefix=$HOME/R/R-3.4.1/ --with-cairo  --with-jpeglib --with-readline --with-x --with-tcltk  --with-blas --enable-BLAS-shlib --with-lapack --enable-R-profiling '--enable-R-shlib' '--enable-memory-profiling'
+not use earlier
+
+[sxm1600@pegasus R]$ ./configure --prefix=$HOME/R/R-3.4.1/ --with-cairo  --with-jpeglib --with-readline --with-x --with-tcltk  --with-blas --enable-BLAS-shlib --with-lapack --enable-R-profiling --without-recommended-packages '--enable-R-shlib' '--enable-memory-profiling'
+
+./configure --prefix=$HOME/Rsrc/R-3.4.1/ --with-cairo  --with-jpeglib --with-readline --with-x --with-tcltk  --with-blas --enable-BLAS-shlib --with-lapack --enable-R-profiling --without-recommended-packages '--enable-R-shlib' '--enable-memory-profiling'
+
+
+ make prefix=$HOME/R install
+make prefix=$HOME/Rsrc install
+
+vi ~/.bashrc
+export PATH=/nethome/sxm1600/Rsrc/bin:$HOME/packages/bin:$PATH
+
+%%%%%%%%%%%%%install r packages
+[sxm1600@pegasus src]$ R CMD INSTALL IlluminaHumanMethylation450kmanifest_0.4.0.tar.gz
+
+[sxm1600@pegasus Rsrc]$ wget http://xmlsoft.org/sources/libxml2-2.7.8.tar.gz
+
+
+
+
+[sxm1600@pegasus ~]$ module unload python/2.7.3
+
+[sxm1600@pegasus ~]$ module load python/3.3.1
+
+
