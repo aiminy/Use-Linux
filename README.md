@@ -80,5 +80,7 @@
  pip install --upgrade --user pysam
 
 * get disk usage information
+
 sudo apt-get install di
+
 di
