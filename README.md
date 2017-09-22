@@ -1,6 +1,6 @@
 # Use-Linux
 
- * search files with pattern
+* search files with pattern
 
  grep -r pattern /path 2> /dev/null
 
@@ -19,35 +19,35 @@
  
  -I to exclude binary
  
- * list UUID
+* list UUID
 
  ls -l /dev/disk/by-uuid/
 
- * Kill all background jobs 
+* Kill all background jobs 
 
   kill -9 $(jobs -p)
 
- * Run job interactively on pegasus
+* Run job interactively on pegasus
 
   bsub -P bbc -Is -q interactive bash
   
- * Find Select_DE_gene_basd_on_Feature in R code
+* Find Select_DE_gene_basd_on_Feature in R code
  
  ack-grep Select_DE_gene_basd_on_Feature ~/GOSJ/R/*.R
  
- * Find the file with .tiff extension
+* Find the file with .tiff extension
  
  find /media/H_driver/ -name  "*.tiff" 2>/dev/null
  
- * find empty directory and delete them
+* find empty directory and delete them
   
  find /media/H_driver/PJ/Results -depth -type d -empty -delete
 
- * find empty directory
+* find empty directory
 
  find /media/H_driver/PJ/Results -depth -type d -empty
 
- * Setup path for R installation(add the following settings to $HOME/.bashrc, then source $HOME/.bashrc) 
+* Setup path for R installation(add the following settings to $HOME/.bashrc, then source $HOME/.bashrc) 
 
  export PATH=$HOME/packages/bin:$PATH
 
@@ -59,15 +59,15 @@
 
  export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:$HOME/packages/include"
  
- * Check hard disk partitions and disk space on Linux
+* Check hard disk partitions and disk space on Linux
  
  df -h | grep ^/dev
 
- * Check size of directory
+* Check size of directory
  
  du -h | sort -rh | head
  
- * Check size of all files
+* Check size of all files
  
  du -ha | sort -h
 
@@ -75,6 +75,10 @@
 
  pip install --install-option="--prefix=$HOME/3UTR-Seq/inst/RSeQC" RSeQC
  
- * update pysam module
+* update pysam module
  
  pip install --upgrade --user pysam
+
+* get disk usage information
+sudo apt-get install di
+di
