@@ -84,3 +84,24 @@
 sudo apt-get install di
 
 di
+
+* mount ssh driver to your local Macs
+
+1 brew install ssh-copy-id
+
+2 ssh-copy-id -i .ssh/id_rsa.pub axy148@pegasus.ccs.miami.edu
+
+3 download the latest version of FUSE for OS X at the FUSE for OS X web site
+
+4 install FUSE for OS X on my laptop by double-clicking the disk image, then double-clicking on the installation package. There is pretty standard Mac OS X stuff; it went without a hitch.
+
+5 download the latest version of SSHFS for OS X at the FUSE for OS X web site.
+
+6 install SSHFS by double-clicking on the downloaded file. if you ran into an issue here where Mac OS X refused to install the package because SSHFS comes from an “unidentified developer.” To get around this, you need to override the Gatekeeper in Mac OS X, which can be as simple as right-clicking on the package and selecting “Open” from the context menu.
+Both FUSE for OS X and SSFHS were now installed.
+
+7 mkdir ~/mountpoint
+
+8 sshfs -p 22 axy148@pegasus.ccs.miami.edu:/scratch/projects/bbc/aiminy_project ~/pegasus -oauto_cache,reconnect,defer_permissions,noappledouble,negative_vncache,volname=myVolName
+
+9 if you want Unmounting, type "umount ~/mountpoint"
