@@ -109,3 +109,12 @@ sshfs -p 22 axy148@pegasus.ccs.miami.edu:/scratch/projects/bbc/aiminy_project ~/
 ```
 
 10. if you want Unmounting, type "umount ~/pegasus"
+
+## Mount ssh driver to your local linux machine
+
+1. Type the following commands
+```{bash}
+ssh-copy-id -i .ssh/id_rsa.pub axy148@pegasus.ccs.miami.edu
+mkdir /media/pegasus
+sshfs axy148@pegasus.ccs.miami.edu:/scratch/projects/bbc /media/pegasus
+```
