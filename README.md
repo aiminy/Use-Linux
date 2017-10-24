@@ -1,6 +1,6 @@
 # Use-Linux
 
-* search files with pattern
+## search files with pattern
 
  grep -r pattern /path 2> /dev/null
 
@@ -19,35 +19,35 @@
  
  -I to exclude binary
  
-* list UUID
+## list UUID
 
  ls -l /dev/disk/by-uuid/
 
-* Kill all background jobs 
+## Kill all background jobs 
 
   kill -9 $(jobs -p)
 
-* Run job interactively on pegasus
+## Run job interactively on pegasus
 
   bsub -P bbc -Is -q interactive bash
   
-* Find Select_DE_gene_basd_on_Feature in R code
+## Find Select_DE_gene_basd_on_Feature in R code
  
  ack-grep Select_DE_gene_basd_on_Feature ~/GOSJ/R/*.R
  
-* Find the file with .tiff extension
+## Find the file with .tiff extension
  
  find /media/H_driver/ -name  "*.tiff" 2>/dev/null
  
-* find empty directory and delete them
+## find empty directory and delete them
   
  find /media/H_driver/PJ/Results -depth -type d -empty -delete
 
-* find empty directory
+## find empty directory
 
  find /media/H_driver/PJ/Results -depth -type d -empty
 
-* Setup path for R installation(add the following settings to $HOME/.bashrc, then source $HOME/.bashrc) 
+## Setup path for R installation(add the following settings to $HOME/.bashrc, then source $HOME/.bashrc) 
 
  export PATH=$HOME/packages/bin:$PATH
 
@@ -59,49 +59,49 @@
 
  export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:$HOME/packages/include"
  
-* Check hard disk partitions and disk space on Linux
+## Check hard disk partitions and disk space on Linux
  
  df -h | grep ^/dev
 
-* Check size of directory
+## Check size of directory
  
  du -h | sort -rh | head
  
-* Check size of all files
+## Check size of all files
  
  du -ha | sort -h
 
-* pip install to certain directory
+## pip install to certain directory
 
  pip install --install-option="--prefix=$HOME/3UTR-Seq/inst/RSeQC" RSeQC
  
-* update pysam module
+## update pysam module
  
  pip install --upgrade --user pysam
 
-* get disk usage information
+## get disk usage information
 
 sudo apt-get install di
 
 di
 
-* mount ssh driver to your local Macs
+## mount ssh driver to your local Macs
 
-1 brew install ssh-copy-id
+1. brew install ssh-copy-id
 
-2 ssh-copy-id -i .ssh/id_rsa.pub axy148@pegasus.ccs.miami.edu
+2. ssh-copy-id -i .ssh/id_rsa.pub axy148@pegasus.ccs.miami.edu
 
-3 download the latest version of FUSE for OS X at the FUSE for OS X web site
+3. download the latest version of FUSE for OS X at the FUSE for OS X web site
 
-4 install FUSE for OS X on my laptop by double-clicking the disk image, then double-clicking on the installation package. There is pretty standard Mac OS X stuff; it went without a hitch.
+4. install FUSE for OS X on my laptop by double-clicking the disk image, then double-clicking on the installation package. There is pretty standard Mac OS X stuff; it went without a hitch.
 
-5 download the latest version of SSHFS for OS X at the FUSE for OS X web site.
+5. download the latest version of SSHFS for OS X at the FUSE for OS X web site.
 
-6 install SSHFS by double-clicking on the downloaded file. if you ran into an issue here where Mac OS X refused to install the package because SSHFS comes from an “unidentified developer.” To get around this, you need to override the Gatekeeper in Mac OS X, which can be as simple as right-clicking on the package and selecting “Open” from the context menu.
+6. install SSHFS by double-clicking on the downloaded file. if you ran into an issue here where Mac OS X refused to install the package because SSHFS comes from an “unidentified developer.” To get around this, you need to override the Gatekeeper in Mac OS X, which can be as simple as right-clicking on the package and selecting “Open” from the context menu.
 Both FUSE for OS X and SSFHS were now installed.
 
-7 mkdir ~/mountpoint
+7. mkdir ~/pegasus
 
-8 sshfs -p 22 axy148@pegasus.ccs.miami.edu:/scratch/projects/bbc/aiminy_project ~/pegasus -oauto_cache,reconnect,defer_permissions,noappledouble,negative_vncache,volname=myVolName
+8. sshfs -p 22 axy148@pegasus.ccs.miami.edu:/scratch/projects/bbc/aiminy_project ~/pegasus -oauto_cache,reconnect,defer_permissions,noappledouble,negative_vncache,volname=pegasus
 
-9 if you want Unmounting, type "umount ~/mountpoint"
+9. if you want Unmounting, type "umount ~/pegasus"
