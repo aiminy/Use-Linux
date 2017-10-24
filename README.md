@@ -118,3 +118,6 @@ ssh-copy-id -i .ssh/id_rsa.pub axy148@pegasus.ccs.miami.edu
 mkdir /media/pegasus
 sshfs axy148@pegasus.ccs.miami.edu:/scratch/projects/bbc /media/pegasus
 ```
+
+## Make a soft link for "Dropbox (BBSR)"
+ln -s "Dropbox (BBSR)" Dropbox
