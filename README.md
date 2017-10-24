@@ -102,6 +102,9 @@ Both FUSE for OS X and SSFHS were now installed.
 
 7. mkdir ~/pegasus
 
-8. sshfs -p 22 axy148@pegasus.ccs.miami.edu:/scratch/projects/bbc/aiminy_project ~/pegasus -oauto_cache,reconnect,defer_permissions,noappledouble,negative_vncache,volname=pegasus
+8. Type the following commands
+```{bash}
+sshfs -p 22 axy148@pegasus.ccs.miami.edu:/scratch/projects/bbc/aiminy_project ~/pegasus -oauto_cache,reconnect,defer_permissions,noappledouble,negative_vncache,volname=pegasus
+```
 
 9. if you want Unmounting, type "umount ~/pegasus"
