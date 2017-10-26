@@ -120,4 +120,6 @@ sshfs axy148@pegasus.ccs.miami.edu:/scratch/projects/bbc /media/pegasus
 ```
 
 ## Make a soft link for "Dropbox (BBSR)"
+```{bash}
 ln -s "Dropbox (BBSR)" Dropbox
+```
