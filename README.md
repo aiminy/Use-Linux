@@ -105,7 +105,7 @@ di
 
 9. Type the following commands
 ```{bash}
-sshfs -p 22 axy148@pegasus.ccs.miami.edu:/scratch/projects/bbc/aiminy_project ~/pegasus -oauto_cache,reconnect,defer_permissions,noappledouble,negative_vncache,volname=pegasus
+sshfs -p 22 axy148@pegasus.ccs.miami.edu:/scratch/projects/bbc ~/pegasus -oauto_cache,reconnect,defer_permissions,noappledouble,negative_vncache,volname=pegasus
 ```
 
 10. if you want Unmounting, type "umount ~/pegasus"
