@@ -130,3 +130,13 @@ sshfs axy148@pegasus.ccs.miami.edu:/scratch/projects/bbc /media/pegasus
 ```{bash}
 ln -s "Dropbox (BBSR)" Dropbox
 ```
+## Back up the files in pegasus Bropbox
+```{bash}
+# Show example
+cd Dropbox
+ln -s ~/MyHomeAtPegasus/Danny_chip3/sample_infor_Danny_chip3.txt
+highligth sample_infor_Danny_chip3.txt file, right click, then select "Smart Sync" then select "Online Only"
+After finish sync, you can 
+umount ~/MyHomeAtPegasus
+```
+
