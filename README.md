@@ -130,7 +130,7 @@ sshfs axy148@pegasus.ccs.miami.edu:/scratch/projects/bbc /media/pegasus
 ```{bash}
 ln -s "Dropbox (BBSR)" Dropbox
 ```
-## Back up the files in pegasus Bropbox
+## Back up the files in pegasus to Dropbox
 ```{bash}
 # Show example
 cd Dropbox
