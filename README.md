@@ -111,7 +111,7 @@ To mount another directory
 
 mkdir ~/MyHomeAtPegasus
 
-sshfs -p 22 axy148@pegasus.ccs.miami.edu:~/ ~/MyHomeAtPegasus -oreconnect,defer_permissions,noappledouble,volname=MyHomeAtPegasus
+sshfs -p 22 axy148@pegasus.ccs.miami.edu:/nethome/axy148 ~/MyHomeAtPegasus -oreconnect,defer_permissions,noappledouble,volname=MyHomeAtPegasus
 
 ```
 
