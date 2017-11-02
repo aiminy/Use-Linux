@@ -106,6 +106,13 @@ di
 9. Type the following commands
 ```{bash}
 sshfs -p 22 axy148@pegasus.ccs.miami.edu:/scratch/projects/bbc ~/pegasus -oauto_cache,reconnect,defer_permissions,noappledouble,negative_vncache,volname=pegasus
+
+To mount another directory 
+
+mkdir ~/MyHomeAtPegasus
+
+sshfs -p 22 axy148@pegasus.ccs.miami.edu:~/ ~/MyHomeAtPegasus -oreconnect,defer_permissions,noappledouble,volname=MyHomeAtPegasus
+
 ```
 
 10. if you want Unmounting, type "umount ~/pegasus"
