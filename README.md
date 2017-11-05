@@ -38,7 +38,11 @@ ack-grep Select_DE_gene_basd_on_Feature ~/GOSJ/R/*.R
 ## Find the file with .tiff extension
  
 find /media/H_driver/ -name  "*.tiff" 2>/dev/null
- 
+
+## Find the file with *.bai extension and delete with asking for permission 
+
+find  /scratch/projects/bbc/Project/DI/Output_rMATS_filtered -type f -name "*.bai" -exec rm -i {} \;
+
 ## Find empty directory and delete them
   
 find /media/H_driver/PJ/Results -depth -type d -empty -delete
