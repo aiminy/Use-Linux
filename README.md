@@ -68,9 +68,13 @@ find /media/H_driver/PJ/Results -depth -type d -empty
  df -h | grep ^/dev
 
 ## Check size of directory
- 
+```{bash}
  du -h | sort -rh | head
  
+ or
+ 
+ du -sh ~/pegasus/aiminy_project
+``` 
 ## Check size of all files
  
  du -ha | sort -h
