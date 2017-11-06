@@ -133,6 +133,16 @@ ssh-copy-id -i .ssh/id_rsa.pub axy148@pegasus.ccs.miami.edu
 mkdir /media/pegasus
 sshfs axy148@pegasus.ccs.miami.edu:/scratch/projects/bbc /media/pegasus
 ```
+2. If you have an erro like the following:
+```{bash}
+sshfs axy148@pegasus.ccs.miami.edu:/scratch/projects/bbc /media/pegasus
+fuse: mountpoint is not empty
+fuse: if you are sure this is safe, use the 'nonempty' mount option
+
+try this:
+```{bash}
+aiminyan@aiminyan-Precision-Tower-5810:~$ sshfs axy148@pegasus.ccs.miami.edu:/scratch/projects/bbc /media/pegasus -o nonempty
+```
 
 ## Make a soft link for "Dropbox (BBSR)"
 ```{bash}
