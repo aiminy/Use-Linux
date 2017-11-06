@@ -138,6 +138,7 @@ sshfs axy148@pegasus.ccs.miami.edu:/scratch/projects/bbc /media/pegasus
 sshfs axy148@pegasus.ccs.miami.edu:/scratch/projects/bbc /media/pegasus
 fuse: mountpoint is not empty
 fuse: if you are sure this is safe, use the 'nonempty' mount option
+```
 
 try this:
 ```{bash}
