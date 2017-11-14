@@ -159,3 +159,7 @@ After finish sync, you can
 umount ~/MyHomeAtPegasus
 ```
 
+## Kill all processes that their name includes "download"
+```bash
+ps aux | grep -ie download | awk '{print $2}' | xargs kill -9
+```
