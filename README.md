@@ -163,3 +163,24 @@ umount ~/MyHomeAtPegasus
 ```bash
 ps aux | grep -ie download | awk '{print $2}' | xargs kill -9
 ```
+
+## To mount H drive, edit your /etc/fstab file 
+### note : make a smbcredentials file with your usr name and passpord included in
+
+```
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/sda3 during installation
+UUID=fb33babc-a08c-4387-bf77-72bc46ccc66b /               ext4    errors=remount-ro 0       1
+//scccresfs.cgcent.miami.edu/Bioinformatics /media/H_driver cifs iocharset=utf8,credentials=/home/aiminyan/.smbcredentials,uid=1000,user 0 0
+//sccceqfs.cgcent.miami.edu/BBSR$ /media/bbc_driver cifs iocharset=utf8,credentials=/home/aiminyan/.smbcredentials,uid=1000,user 0 0
+//umeqstor-nas.cgcent.miami.edu/LOCKHART /media/Lockhart cifs iocharset=utf8,credentials=/home/aiminyan/.smbcredentials,uid=1000,user 0
+/swapfile none swap sw 0 0
+```
+
+
