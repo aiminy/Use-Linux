@@ -183,4 +183,10 @@ UUID=fb33babc-a08c-4387-bf77-72bc46ccc66b /               ext4    errors=remount
 /swapfile none swap sw 0 0
 ```
 
+## set docker
+```
+sudo apt install docker.io
 
+sudo usermod -aG docker $USER
+
+```
