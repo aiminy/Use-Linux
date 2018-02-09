@@ -192,12 +192,12 @@ sudo usermod -aG docker $USER
 ```
  ## To deal with "system() call from RStudio does not find path"
 ```
- sudo emacs /etc/R/Renviron.site 
- add
+system("echo $PATH") on rstudio Console, copy
+
+emacs .Renviron
+add
  
- 
-FSLDIR=/home/aiminyan/miniconda3/bin
-PATH=${FSLDIR}:$PATH
+PATH = usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/aiminyan/miniconda3/bin
 
 restart rstudio,
 then it should work
