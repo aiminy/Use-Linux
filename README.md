@@ -190,3 +190,15 @@ sudo apt install docker.io
 sudo usermod -aG docker $USER
 
 ```
+ ## To deal with "system() call from RStudio does not find path"
+```
+ sudo emacs /etc/R/Renviron.site 
+ add
+ 
+ 
+FSLDIR=/home/aiminyan/miniconda3/bin
+PATH=${FSLDIR}:$PATH
+
+restart rstudio,
+then it should work
+ ```
