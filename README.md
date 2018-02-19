@@ -202,3 +202,8 @@ PATH = usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/u
 restart rstudio,
 then it should work
  ```
+
+## To install Oracle Java from conda
+```
+conda install -c cyclus java-jdk
+```
