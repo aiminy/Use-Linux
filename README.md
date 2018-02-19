@@ -207,3 +207,8 @@ then it should work
 ```
 conda install -c cyclus java-jdk
 ```
+
+## To install openjdk from conda
+```
+conda install -c anaconda openjdk 
+```
