@@ -212,3 +212,16 @@ conda install -c cyclus java-jdk
 ```
 conda install -c anaconda openjdk 
 ```
+
+## To Install gatk4 on pegasus
+
+```
+module unload python/2.7.3
+conda install -c bioconda gatk4 
+gatk-launch
+```
+
+
+```
+
+
