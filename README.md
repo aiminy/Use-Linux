@@ -69,8 +69,11 @@ find /media/H_driver/PJ/Results -depth -type d -empty
 
 ## Check size of directory
 ```{bash}
+
  du -h | sort -rh | head
  
+ du -h /media/H_driver/Aimin_project/ | sort -rh | head
+  
  or
  
  du -sh ~/pegasus/aiminy_project
