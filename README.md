@@ -226,5 +226,5 @@ gatk-launch
 
 ## Use tar to create a *.tar.gz file
 ```
-tar pczvf /root/etc.tar.gz /etc
+tar -pczvf /root/etc.tar.gz /etc
 ```
