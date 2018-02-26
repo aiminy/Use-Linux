@@ -224,7 +224,7 @@ conda install -c bioconda gatk4
 gatk-launch
 ```
 
-
+## Use tar to create a *.tar.gz file
 ```
-
-
+tar pczvf /root/etc.tar.gz /etc
+```
