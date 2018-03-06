@@ -228,3 +228,7 @@ gatk-launch
 ```
 tar -pczvf /root/etc.tar.gz /etc
 ```
+## to mount , add the following line to /etc/fstab
+```
+//scccresfs.cgcent.miami.edu/bioinformatics_2 /media/H_driver2 cifs iocharset=utf8,credentials=/home/aiminyan/.smbcredentials,uid=1000,user 0 0
+```
