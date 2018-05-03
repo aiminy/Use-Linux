@@ -232,3 +232,9 @@ tar -pczvf /root/etc.tar.gz /etc
 ```
 //scccresfs.cgcent.miami.edu/bioinformatics_2 /media/H_driver2 cifs iocharset=utf8,credentials=/home/aiminyan/.smbcredentials,uid=1000,user 0 0
 ```
+
+## check cpu and memory of your linux system
+...
+sudo lshw -short -C cpu
+sudo lshw -short -C memory
+...
