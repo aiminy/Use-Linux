@@ -234,7 +234,7 @@ tar -pczvf /root/etc.tar.gz /etc
 ```
 
 ## check cpu and memory of your linux system
-...
+```
 sudo lshw -short -C cpu
 sudo lshw -short -C memory
-...
+```
