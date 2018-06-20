@@ -125,8 +125,7 @@ mkdir ~/MyHomeAtPegasus
 sshfs -p 22 axy148@pegasus.ccs.miami.edu:/nethome/axy148 ~/MyHomeAtPegasus -oreconnect,defer_permissions,noappledouble,volname=MyHomeAtPegasus
 
 mkdir ~/pegasus2
-sshfs -p 22 axy148@pegasus.ccs.miami.edu:/projects2/med/bbc ~/pegasus2 -oauto_cache,reconnect,defer_permissions,volname=pegasus2
-
+sshfs -p 22 axy148@pegasus.ccs.miami.edu:/projects2/med/bbc ~/pegasus2 -oauto_cache,reconnect,defer_permissions,noappledouble,negative_vncache,volname=pegasus2
 ```
 
 10. if you want Unmounting, type "umount ~/pegasus"
