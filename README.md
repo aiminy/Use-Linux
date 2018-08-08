@@ -100,21 +100,23 @@ di
 
 1. brew install ssh-copy-id
 
-2. ssh-copy-id -i .ssh/id_rsa.pub axy148@pegasus.ccs.miami.edu
+2. ssh-keygen
 
-3. download the latest version of FUSE for OS X at the FUSE for OS X web site
+3. ssh-copy-id -i .ssh/id_rsa.pub axy148@pegasus.ccs.miami.edu
 
-4. install FUSE for OS X on my laptop by double-clicking the disk image, then double-clicking on the installation package. There is pretty standard Mac OS X stuff; it went without a hitch.
+4. download the latest version of FUSE for OS X at the FUSE for OS X web site
 
-5. download the latest version of SSHFS for OS X at the FUSE for OS X web site.
+5. install FUSE for OS X on my laptop by double-clicking the disk image, then double-clicking on the installation package. There is pretty standard Mac OS X stuff; it went without a hitch.
 
-6. install SSHFS by double-clicking on the downloaded file. if you ran into an issue here where Mac OS X refused to install the package because SSHFS comes from an “unidentified developer.” To get around this, you need to override the Gatekeeper in Mac OS X, which can be as simple as right-clicking on the package and selecting “Open” from the context menu.
+6. download the latest version of SSHFS for OS X at the FUSE for OS X web site.
 
-7. Both FUSE for OS X and SSFHS were now installed.
+7. install SSHFS by double-clicking on the downloaded file. if you ran into an issue here where Mac OS X refused to install the package because SSHFS comes from an “unidentified developer.” To get around this, you need to override the Gatekeeper in Mac OS X, which can be as simple as right-clicking on the package and selecting “Open” from the context menu.
 
-8. mkdir ~/pegasus
+8. Both FUSE for OS X and SSFHS were now installed.
 
-9. Type the following commands
+9. mkdir ~/pegasus
+
+10. Type the following commands
 ```{bash}
 sshfs -p 22 axy148@pegasus.ccs.miami.edu:/scratch/projects/bbc ~/pegasus -oauto_cache,reconnect,defer_permissions,noappledouble,negative_vncache,volname=pegasus
 
@@ -134,7 +136,7 @@ mkdir ProjectAtCluster
 sshfs -p 22 ay64w@ghpcc06.umassrc.org:/project ProjectAtCluster -oauto_cache,reconnect,defer_permissions,noappledouble,negative_vncache,volname=ProjectAtCluster
 ```
 
-10. if you want Unmounting, type "umount ~/pegasus"
+11. if you want Unmounting, type "umount ~/pegasus"
 
 ## Mount ssh driver to your local linux machine
 
