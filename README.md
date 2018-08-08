@@ -127,6 +127,9 @@ sshfs -p 22 axy148@pegasus.ccs.miami.edu:/nethome/axy148 ~/MyHomeAtPegasus -orec
 mkdir ~/pegasus2
 sshfs -p 22 axy148@pegasus.ccs.miami.edu:/projects2/med/bbc ~/pegasus2 -oauto_cache,reconnect,defer_permissions,noappledouble,negative_vncache,volname=pegasus2
 
+mkdir HomeAtCluster
+sshfs -p 22 ay64w@ghpcc06.umassrc.org:/home/ay64w HomeAtCluster -oauto_cache,reconnect,defer_permissions,noappledouble,negative_vncache,volname=HomeAtCluster
+
 mkdir ProjectAtCluster
 sshfs -p 22 ay64w@ghpcc06.umassrc.org:/project ProjectAtCluster -oauto_cache,reconnect,defer_permissions,noappledouble,negative_vncache,volname=ProjectAtCluster
 ```
