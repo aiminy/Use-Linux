@@ -248,3 +248,9 @@ tar -pczvf /root/etc.tar.gz /etc
 sudo lshw -short -C cpu
 sudo lshw -short -C memory
 ```
+## convert ^M to new line in vim on MAC
+```
+vim file
+:%s/<Ctrl-V><Ctrl-M>/\r/g
+:wq
+```
