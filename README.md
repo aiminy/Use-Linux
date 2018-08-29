@@ -254,3 +254,7 @@ vim file
 :%s/<Ctrl-V><Ctrl-M>/\r/g
 :wq
 ```
+## Run job interactively on UMASS hpc(note: max time: 8 hour)
+```
+bsub -Is -q interactive -W 8:00 -n1 -R "span[hosts=1] rusage[mem=4096]" /bin/bash
+```
