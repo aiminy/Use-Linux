@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/63700527.svg)](https://zenodo.org/badge/latestdoi/63700527)
+
 # linux,git,dropbox 101
 
 ## Search files with pattern
