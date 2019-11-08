@@ -260,3 +260,22 @@ vim file
 ```
 bsub -Is -q interactive -W 8:00 -n1 -R "span[hosts=1] rusage[mem=4096]" /bin/bash
 ```
+
+## Some useful tips
+
+```
+fn+control+left arrow equals HOME
+fn+control+right arrow equals END
+
+when in screen on linux, to move up and down
+
+control+A, then esc, then you can move using up and down arrow
+To get back, presss esc
+
+to get screen list
+
+control + A, and shift " 
+
+```
+
+
