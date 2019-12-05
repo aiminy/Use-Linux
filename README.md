@@ -264,8 +264,8 @@ bsub -Is -q interactive -W 8:00 -n1 -R "span[hosts=1] rusage[mem=4096]" /bin/bas
 ## Some useful tips
 
 ```
-fn+control+left arrow equals HOME
-fn+control+right arrow equals END
+fn+shift+left arrow equals HOME
+fn+shift+right arrow equals END
 
 when in screen on linux, to move up and down
 
